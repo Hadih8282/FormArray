@@ -1,0 +1,15 @@
+<form >
+  <input
+    type="text"
+    class="form-control"
+    (keydown.enter)=" addTopic(topic,$event)"
+    #topic
+  />
+  <ul class="list-group">
+      <li *ngFor=" let topic of topics.controls"
+      class="list-group-item"
+      (click)="removeTopice(topic)">
+        {{topic.value}}
+      </li>
+  </ul>
+</form>
